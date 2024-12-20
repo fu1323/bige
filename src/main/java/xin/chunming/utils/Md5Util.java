@@ -1,4 +1,4 @@
-package com.itheima.bigeventadmin.utils;
+package xin.chunming.utils;
 
 
 import java.security.MessageDigest;
