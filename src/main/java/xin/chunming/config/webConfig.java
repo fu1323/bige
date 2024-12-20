@@ -9,7 +9,7 @@ import xin.chunming.intecepter.intecepter;
 public class webConfig implements WebMvcConfigurer {
     @Autowired
     private intecepter inte;
-
+/*1*/
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(inte).excludePathPatterns("/user/login","/user/register");
