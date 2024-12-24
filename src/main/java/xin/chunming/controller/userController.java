@@ -3,10 +3,7 @@ package xin.chunming.controller;
 import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import xin.chunming.pojo.Result;
 import xin.chunming.pojo.User;
 import xin.chunming.service.impl.userServiceImpl;
@@ -43,6 +40,14 @@ public class userController {
             return Result.success(JwtUtil.genToken(stringStringHashMap));
         } else return Result.error("用户名密码错误");
     }
+
+    @PutMapping("/update")
+    public Result update(@RequestBody @Validated User u) {
+        reg.update(u);
+        return Result.success();
+
+    }
+
     @GetMapping("/111")
     public Result l() {
         return Result.success("121212121");

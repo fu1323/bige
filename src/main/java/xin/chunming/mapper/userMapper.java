@@ -1,9 +1,6 @@
 package xin.chunming.mapper;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import xin.chunming.pojo.User;
 
 import java.util.List;
@@ -17,4 +14,6 @@ public interface userMapper {
     public void registInsert(@Param("username") String uName, @Param("password") String uPassword);
     @Select("select * from big_event.user where username=#{username} and password=#{password}")
     public List<User> select2Login(@Param("username") String userName,@Param("password") String password);
+    @Update("update user set username=#{username},nickname=#{nickname},email=#{email},update_time=now() where id = #{id}")
+    public void update(User u);
 }

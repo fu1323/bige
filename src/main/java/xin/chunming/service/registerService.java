@@ -8,5 +8,6 @@ public interface registerService {
     List<User> findbyUserName(String username);
     void register(String userName,String password);
     User login(String userName,String password);
+    void update(User u);
 
 }

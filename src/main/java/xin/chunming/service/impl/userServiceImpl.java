@@ -30,4 +30,9 @@ public class userServiceImpl implements registerService {
         return users.isEmpty() ? null : users.getFirst();
 
     }
+
+    @Override
+    public void update(User u) {
+        rm.update(u);
+    }
 }
