@@ -9,5 +9,6 @@ public interface registerService {
     void register(String userName,String password);
     User login(String userName,String password);
     void update(User u);
-
+    void updateAvator(String avatarURL,String id);
+  void   updatePwd(String username,String newpwd);
 }

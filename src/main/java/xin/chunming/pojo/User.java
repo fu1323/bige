@@ -1,6 +1,7 @@
 package xin.chunming.pojo;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -13,6 +14,7 @@ public class User {
     @NotNull
     private Integer id;//主键ID
     private String username;//用户名
+    @JsonIgnore//响应含有用户名token  不包括密码
     private String password;//密码
 
     @NotEmpty

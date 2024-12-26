@@ -35,4 +35,14 @@ public class userServiceImpl implements registerService {
     public void update(User u) {
         rm.update(u);
     }
+
+    @Override
+    public void updateAvator(String avatarURL, String id) {
+        rm.updateURL(avatarURL, id);
+    }
+
+    @Override
+    public void updatePwd(String username, String newpwd) {
+        rm.updatePwd(username, newpwd);
+    }
 }
