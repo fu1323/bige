@@ -84,8 +84,4 @@ public class userController {
 
     }
 
-    @GetMapping("/111")
-    public Result l() {
-        return Result.success("121212121");
-    }
 }
