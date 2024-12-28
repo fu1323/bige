@@ -8,4 +8,7 @@ public interface categoryService {
 
     List<Category> queryByUName(String create_user);
     void addCategory(Category category);
+    void updateCategory(Category category);
+    void deleteCategory(String id);
+    Category getCategory(String id);
 }
