@@ -33,7 +33,7 @@ public class categoryController {
     }
 
     @PutMapping
-    public Result updateCategory(@RequestBody @Validated Category category) {
+    public Result updateCategory(@RequestBody @Validated(Category.upd.class) Category category) {
 //        Map<String, Object> stringObjectMap = ThreadLocalUtil.get();
         categoryService.updateCategory(category);
         return Result.success();
